@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    
+    <script src="https://kit.fontawesome.com/46d47ced0d.js" crossorigin="anonymous"></script>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <title>Thrilltourism</title>
+    <link rel="icon" type="image/x-icon" href="logo-dark-sm.png">
+    <style>
+        .chat-box {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .chat-box.open {
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 ">
+    <nav x-data="{ navbarOpen: false } " class="fixed top-0 w-full bg-gray-100" >
+        
+
+        <div class="container flex justify-center items-center">
+            <img src="logo-dark.png" class=" ml-14 h-8 hidden lg:inline-block">
+
+           
+            <img src="logo-dark-sm.png" class="m-2 h-8 lg:hidden">
+
+            <button class="inline-flex m-2  p-2 justify-center items-center lg:hidden" @click="navbarOpen =!navbarOpen">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="ml-auto ">
+                <ul class="inline-flex space-x-8 m-2 ">
+                    <button>
+                        <li class="border rounded-md p-2 justify-center text-white items-center bg-blue-600"><a href="">Near me</a>
+                        </li>
+                    </button>
+                    <button>
+                        <li class="border rounded-md p-2 justify-center  text-white items-center bg-blue-600"><a href="">Add a
+                                listing</a></li>
+                    </button>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lg:bg-white  ">
+            <ul class="    text-gray-500 flex flex-col  lg:flex-row mt-4 space-x-5 lg:px-4 lg:py-2  w-full  "
+                :class="{ 'hidden': navbarOpen }">
+                <li><a href="#" class="ml-4 hover:text-blue-600"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#" class="hover:text-blue-600"><i class="fa-solid fa-bars"></i> All Listings</a></li>
+                <li><a href="#" class="hover:text-blue-600">Blogs</a></li>
+                <li><a href="#" class="hover:text-blue-600">Contact us</a></li>
+            </ul>
+        </div>
+
+        </div>
+
+    </nav>
+    <div class="mt-40 flex justify-center ">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15281528.701485403!2d72.09779158982077!3d20.757198428364198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1690670588268!5m2!1sen!2sin"
+            width="80%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            class="border rounded-xl"></iframe>
+
+    </div>
+    <div class="mt-10 flex justify-center">
+        <button class=" bg-blue-600 rounded-md p-2 text-white">Near Me</button>
+    </div>
+
+    <div class="container mx-auto mt-8">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 space-y-6">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <div class="flex items-center justify-center mt-5">
+                        <img src="pic.jpeg" alt="...">
+                    </div>
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold ">Blog</h1>
+                    <h2>Kasauli Trip FAQs</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>Manali</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="1pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Sagar Thakur Dhaba</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>Delhi</span>
+                </div>
+
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="2pic.jpeg" alt="...">
+                </div>
+                <div class="ml-9">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Siswan Dam</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>Chandigarh</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="3pic.jpeg" alt="...">
+                </div>
+                <div class="ml-9">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Siswan Dam</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>Chandigarh</span>
+                </div>
+            </div>
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="4pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Riva Waterfalls</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>shimla</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Riva Waterfalls</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>solan</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="1pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Riva Waterfalls</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>solan</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="2pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Riva Waterfalls</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>solan</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="3pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Riva Waterfalls</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>solan</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="4pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Riva Waterfalls</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>solan</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Riva Waterfalls</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>solan</span>
+                </div>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg border border-blue-500   rounded-md ">
+                <div class="flex items-center justify-center mt-5">
+                    <img src="1pic.jpeg" alt="...">
+                </div>
+                <div class="ml-8">
+                    <h1 class="font-bold">Blog</h1>
+                    <h2>Riva Waterfalls</h2>
+                </div>
+                <div class="float-right m-4 text-blue-600 ">
+                    <i class="fa-solid fa-location-dot p-2"></i><span>solan</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" items-center justify-center border rounded-xl mt-10 text-center p-8 bg-white w-2/3 mx-auto">
+        <h1 class="text-lg font-bold">List your tourism services for free</h1>
+        <p>Thrill tourism is an online platform that enables tourists to directly connect with hosts, without any commission fees.</p>
+        <button class="bg-blue-600 rounded-md p-2 mt-4 text-white">Publish your ad for free</button>
+    </div>
+
+    <div class="border mt-8 bg-white">
+        <ul class="mt-3 flex m-2 p-2" >
+            <li class="mr-4">2023 © thrilltourism.com | Privacy Policy | Terms and Conditions | Pricing</li>
+            <li class="ml-auto text-red-600 mr-20 hidden lg:inline-block ">beta version</li>
+        </ul>
+    </div>
+    <div x-data="{ chatOpen: false, userMessage: '' }" class="fixed bottom-4 left-4 z-10">
+        
+        <button @click="chatOpen = !chatOpen"
+            class="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center text-white focus:outline-none">
+            <i class="fa-solid fa-comment-dots text-2xl"></i>
+        </button>
+
+       
+        <div x-show="chatOpen" class="chat-box bg-white p-4 rounded-lg shadow-md z-20">
+        
+            <p class="text-gray-600">How can I help you?</p>
+
+            
+            <textarea x-model="userMessage"
+                class="w-full mt-2 p-2 border rounded-md placeholder-gray-400 focus:outline-none resize-none h-32"
+                placeholder="Type your message here..."></textarea>
+        </div>
+    </div>
+    
+</body>
+
+</html>
